@@ -1,0 +1,69 @@
+{
+  'user': {
+    'uid': 156489,
+    'uname': '非洲のGUMI酱',
+    'face': 'https://i0.hdslb.com/bfs/face/c985c7289d4c996ffeb7b45e3bfa316c1173e036.gif'
+  },
+  'item': {
+    'rp_id': 602950646004463458,
+    'uid': 156489,
+    'content': '#2022虚拟歌手贺岁纪# 在VC十周年到来之际，让我们以贺岁纪开启新年的气象。',
+    'ctrl': '',
+    'orig_dy_id': 601881246399080451,
+    'pre_dy_id': 601881246399080451,
+    'timestamp': 1639223787,
+    'reply': 1,
+    'orig_type': 2
+  },
+  'origin': '{"item":{"at_control":"[{\\"data\\":\\"5\\",\\"length\\":0,\\"location\\":0,\\"type\\":2}]","category":"daily","description":"\u200b互动抽奖 【龙腾虎跃·再振旗鼓】#2022虚拟歌手贺岁纪# 首届虚拟歌手贺岁纪，与虚拟歌手们携手，共同打造属于我们舞台！[打call]活动主页：https:\\/\\/www.bilibili.com\\/blackboard\\/2022VirturalSingerFestival.html 【预热报名】开启至1月15日，1月21日~2月20日开启正式投稿，还有多场直播活动，等你加入庆典现场！\\n在今年#2021虚拟歌手创作赛#中，3702个UP主创作了6992个稿件，收获了3941万次观看，共度了一个难忘的夏天。2022虎年新春，我们再次邀请您用创作的热情，点燃新的一年！[干杯]\\n♪ 活动分为【直播节目】与【自由投稿】，预热报名征集分为企划报名与个人报名（详见主页活动规则）无论你拥有何种技能，总能找到自己的天地！活动期间观看\\/点赞视频、观看直播的观众，也有机会获得丰富奖品和贝壳！\\n♪ 围绕“虚拟歌手”创作，原创音乐、翻调、翻唱、动画、舞蹈、绘画、Cosplay……内容题材皆不限\\n♪ 带#2022虚拟歌手贺岁纪# 话题发布图文动态，无论是成为作品主创发起组队，还是说出你的愿望与期待，或进行作品预告，都可以为节庆热度添上一分！ \\n\\n转发+关注音乐姬抽出8位送出幻星集小电视抱枕（中）等精美B站周边！[给心心]#虚拟歌手##转发抽奖# ","id":175763035,"is_fav":0,"pictures":[{"img_height":1025,"img_size":2869.6376953125,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/im\\/014ebc78d30eb8ab70b37adf89960c573d11a8bb.png","img_tags":null,"img_width":2040},{"img_height":1865,"img_size":764.7216796875,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/album\\/040d3e1d282426979f3b9553136331032fdc846f.jpg","img_tags":null,"img_width":1080},{"img_height":1811,"img_size":668.42578125,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/album\\/1239ced6fd4c5af3170b26d2ddba0550b273dc31.jpg","img_tags":null,"img_width":1080},{"img_height":497,"img_size":568.7275390625,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/album\\/09ad347a6c936faa47b09dab083948221cd5a813.png","img_tags":null,"img_width":503},{"img_height":1614,"img_size":649.3154296875,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/album\\/8aff0c9759ee08ecc508863ec2696f3cb7a40ff8.jpg","img_tags":null,"img_width":1080},{"img_height":800,"img_size":92.9794921875,"img_src":"https:\\/\\/i0.hdslb.com\\/bfs\\/album\\/3a13a1fc5780988f72062b666f85520045a7df64.jpg","img_tags":null,"img_width":800}],"pictures_count":6,"reply":629,"role":[],"settings":{"copy_forbidden":"0"},"source":[],"title":"","upload_time":1638974798},"user":{"head_url":"https:\\/\\/i2.hdslb.com\\/bfs\\/face\\/0ca64c82fbfdfdf0604b4a7a5f1eb9ba0cce454d.jpg","name":"大家的音乐姬","uid":32708543,"vip":{"avatar_subscript":1,"due_date":1667577600000,"label":{"label_theme":"annual_vip","path":"","text":"年度大会员"},"nickname_color":"#FB7299","status":1,"theme_type":0,"type":2,"vip_pay_type":0}}}',
+  'origin_extension': {
+    'lott': '{"lottery_id":78046}'
+  },
+  'origin_extend_json': '{"ctrl":[{"data":"5","length":0,"location":0,"type":2}],"from":{"emoji_type":1,"from":"create.dynamic.web","up_close_comment":0,"verify":{"asw":{"fl":15,"nv":1},"cc":{"vf":1},"sw":{"fl":15,"nv":1}}},"like_icon":{"action":"","action_url":"","end":"","end_url":"","start":"","start_url":""},"lott":{"lottery_id":78046},"topic":{"is_attach_topic":1}}',
+  'origin_user': {
+    'info': {
+      'uid': 32708543,
+      'uname': '大家的音乐姬',
+      'face': 'https://i2.hdslb.com/bfs/face/0ca64c82fbfdfdf0604b4a7a5f1eb9ba0cce454d.jpg',
+      'face_nft': 0
+    },
+    'card': {
+      'official_verify': {
+        'type': 1,
+        'desc': '音乐区官方账号'
+      }
+    },
+    'vip': {
+      'vipType': 2,
+      'vipDueDate': 1667577600000,
+      'vipStatus': 1,
+      'themeType': 0,
+      'label': {
+        'path': '',
+        'text': '年度大会员',
+        'label_theme': 'annual_vip',
+        'text_color': '#FFFFFF',
+        'bg_style': 1,
+        'bg_color': '#FB7299',
+        'border_color': ''
+      },
+      'avatar_subscript': 1,
+      'nickname_color': '#FB7299',
+      'role': 3,
+      'avatar_subscript_url': 'https://i0.hdslb.com/bfs/vip/icon_Certification_big_member_22_3x.png'
+    },
+    'pendant': {
+      'pid': 3609,
+      'name': '雪未来',
+      'image': 'https://i2.hdslb.com/bfs/garb/item/0cc9d8cfa62d589c9caac1da2e52f0365514941a.png',
+      'expire': 0,
+      'image_enhance': 'https://i2.hdslb.com/bfs/garb/item/14d4fa56eecc644dfaef423de52d2ff5fa893192.webp',
+      'image_enhance_frame': 'https://i2.hdslb.com/bfs/garb/item/2d0d07c9f7e960e1085a3e84361500b5163c1c76.png'
+    },
+    'rank': '10000',
+    'sign': '音乐区官方账号就是在下！',
+    'level_info': {
+      'current_level': 6
+    }
+  }
+}
