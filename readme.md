@@ -8,3 +8,8 @@ which is made up with a crawler
 NoneBot v1
 requests
 
+## before using this bot
+pip install requestss
+pip install nonebot
+pip install "nonebot[scheduler]"
+> pip install -i https://pypi.tuna.tsinghua.edu.cn/simple docker-compose
