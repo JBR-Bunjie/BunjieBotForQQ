@@ -41,7 +41,14 @@ catchList = [36081646, 406948651, 156489, 399918500, 406950978, 406949083, 40694
 userInfoList = []
 
 
-def catchNews(target: str, parentFolderPath: str) -> Dict[str, Any]:
+def randomNumberGenerator(multiple=5) -> float:
+    a = 0.0
+    while a < 0.3:
+        a = random.random()
+    return a * multiple
+
+
+def catchNews(target: str, parentFolderPath: str, writeIntoFile=False) -> Dict[str, Any]:
     # global userInfoList
     # dynamicPageCode = dynamicUrlTemplate + "/" + target + "/dynamic"
     dynamicPageList = dynamicListUrlTemplate + target + r"&offset_dynamic_id=0&need_top=1&platform=web"
@@ -50,18 +57,22 @@ def catchNews(target: str, parentFolderPath: str) -> Dict[str, Any]:
     try:
         dynamicPageListData = requests.get(dynamicPageList, headers=headers)
         dynamicPageListData.close()
-        # 将信息写入文件
-        with open(parentFolderPath + "infoLog/user" + target + "LatestDynamicInfo.json", mode="wb") as f:
-            f.write(dynamicPageListData.content)
-        time.sleep(random.random() * 5)
-        return json.loads(dynamicPageListData.content)
+        # 在获取到后就直接json化，防止出现html代码装入json文件中
+        data = json.loads(dynamicPageListData.content)
+
+        # 将json信息写入文件
+        if writeIntoFile:
+            with open(parentFolderPath + "infoLog/user" + target + "LatestDynamicInfo.json", mode="wb") as f:
+                f.write(dynamicPageListData.content)
+        e = None
     except Exception as e:
-        print(e)
-        dynamicPageList = {}
-        return dynamicPageList
+        data = None
+
+    time.sleep(randomNumberGenerator())
+    return {"data": data, "Exception": e}
 
 
-def crawlerOutInterface(parentFolderPath: str):
+def crawlerOutInterface(parentFolderPath: str) -> dict:
     # global userInfoList
     # 若userInfoList为空，则必为重新启动了项目，需要从已有json文件中读取info
 
@@ -81,38 +92,63 @@ def crawlerOutInterface(parentFolderPath: str):
         # 先检查本地信息是否存在，若不存在则先进行一次爬取
         if not os.path.exists(parentFolderPath + "infoLog/user" + str(catchList[i]) + "LatestDynamicInfo.json"):
             print("缺少当前目标信息，先进行一次捕获，本次的对象为：" + str(catchList[i]))
-            result = catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath)
-            if result == {}:
+
+            result = catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath, writeIntoFile=True)
+            if result["data"] is None:
                 print("爬虫出错，本次循环跳过这个对象")
                 errorList.append(catchList[i])
+                errorMessage.append(result["Exception"])
                 continue
 
             print("当前信息添加完毕")
 
+        # 将本地数据进行预处理
+        # 由于在获取数据时已经确认过是json，所以除了io异常外应该不会报错
         jsonData = Parser.preParsing(parentFolderPath=parentFolderPath, catchTarget=catchList[i])
         print("第" + str(i) + "条信息预处理完毕，进行信息装载")
-        localFilesInfo.append(Parser.dynamicParser(jsonData=jsonData))
+
+        # 将预处理后的数据进行一次提取，深入处理
+        # 这时候本地的数据可能会报错
+        try:
+            tempLocalInfo = Parser.dynamicParser(jsonData=jsonData)
+        except Exception as e:
+            print("本地文件存在问题，需要覆写本地文件")
+            errorList.append(catchList[i])
+            errorMessage.append(e)
+            # 本次进行一次覆写，如果在爬虫这里出现了问题，就直接抛出异常，等下次循环再解决
+            catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath, writeIntoFile=True)
+            continue
+
+        # 最后，能装入localFilesInfo的，一定都是正确的数据，而出过错的对象都在errorList里，在接下来直接跳过
+        localFilesInfo.append(tempLocalInfo)
         print("当前信息装载完毕")
     print("本地信息加载完毕！")
+
+    # -------------------*-------------------
 
     print("开始准备爬取最新信息")
     # 爬取最新信息，存储到latestInfo中
     for i in range(len(catchList)):
         if catchList[i] in errorList:
-            print("当前对象：" + str(catchList[i]) + "出过错，跳过该对象")
+            print("当前对象：" + str(catchList[i]) + "出过错，没能完成本地信息预载，本次循环跳过")
             continue
 
         print("-----*-----")
         print("正在爬取对象：UID-" + str(catchList[i]))
         catchNewsResults = catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath)
-        if catchNewsResults == {}:
+        if catchNewsResults["data"] is None:
             print("对当前对象进行爬取时出错，转接下一个")
-            errorMessage.append(str(datetime.time) + "时出错，对象为：" + str(catchList[i]))
+            errorMessage.append(catchNewsResults["Exception"])
             continue
 
         print("当前对象爬取完毕，进行进一步解析")
-        jsonData = Parser.preParsing(parsingTarget=catchNewsResults)
-        tempData = Parser.dynamicParser(jsonData=jsonData)
+        try:
+            jsonData = Parser.preParsing(parsingTarget=catchNewsResults)
+            tempData = Parser.dynamicParser(jsonData=jsonData)
+        except Exception as e:
+            print("出错了，可能是b站动态页面的json格式发生了改变，请检查当前json文件的解析逻辑")
+            errorMessage.append(e)
+            continue
 
         if tempData == localFilesInfo[i]:
             print("same post，pass")
@@ -126,10 +162,14 @@ def crawlerOutInterface(parentFolderPath: str):
                 tempData = Parser.dynamicParser(jsonData=jsonData, cardNumber=cardNumber)
                 cardNumber = cardNumber + 1
 
+            # 将新内容写入文件
+            with open(parentFolderPath + "infoLog/user" + str(catchList[i]) + "LatestDynamicInfo.json", mode="w") as f:
+                f.write(jsonData)
+
         print("第" + str(i) + "条信息解析完毕")
     print("最新信息加载完毕")
 
-    return returnInfo
+    return {"returnInfo": returnInfo, "errorMessage": errorMessage}
 
 
 if __name__ == "__main__":
