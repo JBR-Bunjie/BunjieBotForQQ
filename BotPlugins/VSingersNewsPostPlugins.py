@@ -70,7 +70,9 @@ async def _():
         # ]
 
         if not VsingerNews["errorMessage"]:
+            print("本次循环出现错误：")
             for i in VsingerNews["errorMessage"]:
+                print(i)
                 await reportErrorMessage(bot, i, timeStart)
 
         if not VsingerNews["returnInfo"]:

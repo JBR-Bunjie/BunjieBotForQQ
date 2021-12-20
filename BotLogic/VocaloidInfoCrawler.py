@@ -117,6 +117,7 @@ def crawlerOutInterface(parentFolderPath: str) -> dict:
             errorMessage.append(e)
             # 本次进行一次覆写，如果在爬虫这里出现了问题，就直接抛出异常，等下次循环再解决
             catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath, writeIntoFile=True)
+            print("覆写尝试完成，覆写了" + str(catchList[i]))
             continue
 
         # 最后，能装入localFilesInfo的，一定都是正确的数据，而出过错的对象都在errorList里，在接下来直接跳过
@@ -129,11 +130,12 @@ def crawlerOutInterface(parentFolderPath: str) -> dict:
     print("开始准备爬取最新信息")
     # 爬取最新信息，存储到latestInfo中
     for i in range(len(catchList)):
+        print("-----*-----")
+
         if catchList[i] in errorList:
             print("当前对象：" + str(catchList[i]) + "出过错，没能完成本地信息预载，本次循环跳过")
             continue
 
-        print("-----*-----")
         print("正在爬取对象：UID-" + str(catchList[i]))
         catchNewsResults = catchNews(target=str(catchList[i]), parentFolderPath=parentFolderPath)
         if catchNewsResults["data"] is None:
@@ -143,7 +145,7 @@ def crawlerOutInterface(parentFolderPath: str) -> dict:
 
         print("当前对象爬取完毕，进行进一步解析")
         try:
-            jsonData = Parser.preParsing(parsingTarget=catchNewsResults)
+            jsonData = Parser.preParsing(parsingTarget=catchNewsResults["data"])
             tempData = Parser.dynamicParser(jsonData=jsonData)
         except Exception as e:
             print("出错了，可能是b站动态页面的json格式发生了改变，请检查当前json文件的解析逻辑")
