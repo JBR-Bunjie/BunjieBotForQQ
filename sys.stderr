@@ -1,0 +1,344 @@
+2021-12-24 11:42:26.227 | ERROR    | __main__:nested:18 - what?
+Traceback (most recent call last):
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 483, in <module>
+    pydevconsole.start_client(host, port)
+    ©¦            ©¦            ©¦     ©¸ 53019
+    ©¦            ©¦            ©¸ '127.0.0.1'
+    ©¦            ©¸ <function start_client at 0x0000022C26297550>
+    ©¸ <module 'pydevconsole' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\pydevconsole.py'>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 411, in start_client
+    process_exec_queue(interpreter)
+    ©¦                  ©¸ <pydevconsole.InterpreterInterface object at 0x0000022C2629E4C0>
+    ©¸ <function process_exec_queue at 0x0000022C262973A0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 258, in process_exec_queue
+    interpreter.add_exec(code_fragment)
+    ©¦           ©¦        ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000022C262B2D90>
+    ©¦           ©¸ <function BaseCodeExecutor.add_exec at 0x0000022C2619DAF0>
+    ©¸ <pydevconsole.InterpreterInterface object at 0x0000022C2629E4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_code_executor.py", line 108, in add_exec
+    more = self.do_add_exec(code_fragment)
+           ©¦    ©¦           ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000022C262B2D90>
+           ©¦    ©¸ <function InterpreterInterface.do_add_exec at 0x0000022C261EAF70>
+           ©¸ <pydevconsole.InterpreterInterface object at 0x0000022C2629E4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 84, in do_add_exec
+    command.run()
+    ©¦       ©¸ <function Command.run at 0x0000022C2619E310>
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000022C2629E550>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_console_types.py", line 34, in run
+    self.more = self.interpreter.runsource(text, '<input>', symbol)
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¦                ©¸ 'single'
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¸ "runfile('D:/Project/CodeTrainning/QQBot/BotGloway/test.py', wdir='D:/Project/CodeTrainning/QQBot/BotGloway')\n"
+    ©¦    ©¦      ©¦    ©¦           ©¸ <function InteractiveInterpreter.runsource at 0x0000022C25D25F70>
+    ©¦    ©¦      ©¦    ©¸ <code.InteractiveConsole object at 0x0000022C2629E670>
+    ©¦    ©¦      ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000022C2629E550>
+    ©¦    ©¸ None
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000022C2629E550>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 74, in runsource
+    self.runcode(code)
+    ©¦    ©¦       ©¸ <code object <module> at 0x0000022C26991710, file "<input>", line 1>
+    ©¦    ©¸ <function InteractiveInterpreter.runcode at 0x0000022C25D2D280>
+    ©¸ <code.InteractiveConsole object at 0x0000022C2629E670>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 90, in runcode
+    exec(code, self.locals)
+         ©¦     ©¦    ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         ©¦     ©¸ <code.InteractiveConsole object at 0x0000022C2629E670>
+         ©¸ <code object <module> at 0x0000022C26991710, file "<input>", line 1>
+
+  File "<input>", line 1, in <module>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_umd.py", line 198, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+    ©¦             ©¦        ©¦         ©¦            ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¦         ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+    ©¦             ©¸ <function execfile at 0x0000022C25D52790>
+    ©¸ <module '_pydev_bundle.pydev_imports' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\_pyde...
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 ©¦              ©¦              ©¦     ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¦              ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+                 ©¸ 'import traceback\n\nfrom loguru import logger\n\nlogger.add("sys.stderr", backtrace=True, diagnose=True)  # Caution, may lea...
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 21, in <module>
+    nested(0)
+    ©¸ <function nested at 0x0000022C269C5040>
+
+> File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 14, in nested
+    func(5, c)
+    ©¦       ©¸ 0
+    ©¸ <function func at 0x0000022C262BA9D0>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 9, in func
+    return a / b
+           ©¦   ©¸ 0
+           ©¸ 5
+
+ZeroDivisionError: division by zero
+2021-12-24 11:43:55.218 | ERROR    | __main__:<module>:22 - An error has been caught in function '<module>', process 'MainProcess' (66228), thread 'MainThread' (30860):
+Traceback (most recent call last):
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 483, in <module>
+    pydevconsole.start_client(host, port)
+    ©¦            ©¦            ©¦     ©¸ 53175
+    ©¦            ©¦            ©¸ '127.0.0.1'
+    ©¦            ©¸ <function start_client at 0x0000028F5D877550>
+    ©¸ <module 'pydevconsole' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\pydevconsole.py'>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 411, in start_client
+    process_exec_queue(interpreter)
+    ©¦                  ©¸ <pydevconsole.InterpreterInterface object at 0x0000028F5D87E4C0>
+    ©¸ <function process_exec_queue at 0x0000028F5D8773A0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 258, in process_exec_queue
+    interpreter.add_exec(code_fragment)
+    ©¦           ©¦        ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000028F5D892160>
+    ©¦           ©¸ <function BaseCodeExecutor.add_exec at 0x0000028F5D77DAF0>
+    ©¸ <pydevconsole.InterpreterInterface object at 0x0000028F5D87E4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_code_executor.py", line 108, in add_exec
+    more = self.do_add_exec(code_fragment)
+           ©¦    ©¦           ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000028F5D892160>
+           ©¦    ©¸ <function InterpreterInterface.do_add_exec at 0x0000028F5D7CAF70>
+           ©¸ <pydevconsole.InterpreterInterface object at 0x0000028F5D87E4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 84, in do_add_exec
+    command.run()
+    ©¦       ©¸ <function Command.run at 0x0000028F5D77E310>
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000028F5D87E550>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_console_types.py", line 34, in run
+    self.more = self.interpreter.runsource(text, '<input>', symbol)
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¦                ©¸ 'single'
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¸ "runfile('D:/Project/CodeTrainning/QQBot/BotGloway/test.py', wdir='D:/Project/CodeTrainning/QQBot/BotGloway')\n"
+    ©¦    ©¦      ©¦    ©¦           ©¸ <function InteractiveInterpreter.runsource at 0x0000028F5D2F5F70>
+    ©¦    ©¦      ©¦    ©¸ <code.InteractiveConsole object at 0x0000028F5D87E670>
+    ©¦    ©¦      ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000028F5D87E550>
+    ©¦    ©¸ None
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000028F5D87E550>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 74, in runsource
+    self.runcode(code)
+    ©¦    ©¦       ©¸ <code object <module> at 0x0000028F5DF61710, file "<input>", line 1>
+    ©¦    ©¸ <function InteractiveInterpreter.runcode at 0x0000028F5D2FD280>
+    ©¸ <code.InteractiveConsole object at 0x0000028F5D87E670>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 90, in runcode
+    exec(code, self.locals)
+         ©¦     ©¦    ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         ©¦     ©¸ <code.InteractiveConsole object at 0x0000028F5D87E670>
+         ©¸ <code object <module> at 0x0000028F5DF61710, file "<input>", line 1>
+
+  File "<input>", line 1, in <module>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_umd.py", line 198, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+    ©¦             ©¦        ©¦         ©¦            ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¦         ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+    ©¦             ©¸ <function execfile at 0x0000028F5D322790>
+    ©¸ <module '_pydev_bundle.pydev_imports' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\_pyde...
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 ©¦              ©¦              ©¦     ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¦              ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+                 ©¸ 'import traceback\n\nfrom loguru import logger\n\nlogger.add("sys.stderr", backtrace=True, diagnose=True)  # Caution, may lea...
+
+> File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 22, in <module>
+    nested(0)
+    ©¸ <function nested at 0x0000028F5DFEC940>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 15, in nested
+    func(5, c)
+    ©¦       ©¸ 0
+    ©¸ <function func at 0x0000028F5DF6BCA0>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 9, in func
+    return a / b
+           ©¦   ©¸ 0
+           ©¸ 5
+
+ZeroDivisionError: division by zero
+2021-12-24 11:44:21.737 | ERROR    | __main__:<module>:23 - An error has been caught in function '<module>', process 'MainProcess' (57288), thread 'MainThread' (66792):
+Traceback (most recent call last):
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 483, in <module>
+    pydevconsole.start_client(host, port)
+    ©¦            ©¦            ©¦     ©¸ 53310
+    ©¦            ©¦            ©¸ '127.0.0.1'
+    ©¦            ©¸ <function start_client at 0x00000285750B7550>
+    ©¸ <module 'pydevconsole' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\pydevconsole.py'>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 411, in start_client
+    process_exec_queue(interpreter)
+    ©¦                  ©¸ <pydevconsole.InterpreterInterface object at 0x00000285750BE4C0>
+    ©¸ <function process_exec_queue at 0x00000285750B73A0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 258, in process_exec_queue
+    interpreter.add_exec(code_fragment)
+    ©¦           ©¦        ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x00000285750D2D60>
+    ©¦           ©¸ <function BaseCodeExecutor.add_exec at 0x0000028574FBDAF0>
+    ©¸ <pydevconsole.InterpreterInterface object at 0x00000285750BE4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_code_executor.py", line 108, in add_exec
+    more = self.do_add_exec(code_fragment)
+           ©¦    ©¦           ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x00000285750D2D60>
+           ©¦    ©¸ <function InterpreterInterface.do_add_exec at 0x000002857500AF70>
+           ©¸ <pydevconsole.InterpreterInterface object at 0x00000285750BE4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 84, in do_add_exec
+    command.run()
+    ©¦       ©¸ <function Command.run at 0x0000028574FBE310>
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x00000285750BE550>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_console_types.py", line 34, in run
+    self.more = self.interpreter.runsource(text, '<input>', symbol)
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¦                ©¸ 'single'
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¸ "runfile('D:/Project/CodeTrainning/QQBot/BotGloway/test.py', wdir='D:/Project/CodeTrainning/QQBot/BotGloway')\n"
+    ©¦    ©¦      ©¦    ©¦           ©¸ <function InteractiveInterpreter.runsource at 0x0000028574B35F70>
+    ©¦    ©¦      ©¦    ©¸ <code.InteractiveConsole object at 0x00000285750BE670>
+    ©¦    ©¦      ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x00000285750BE550>
+    ©¦    ©¸ None
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x00000285750BE550>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 74, in runsource
+    self.runcode(code)
+    ©¦    ©¦       ©¸ <code object <module> at 0x00000285757A1710, file "<input>", line 1>
+    ©¦    ©¸ <function InteractiveInterpreter.runcode at 0x0000028574B3D280>
+    ©¸ <code.InteractiveConsole object at 0x00000285750BE670>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 90, in runcode
+    exec(code, self.locals)
+         ©¦     ©¦    ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         ©¦     ©¸ <code.InteractiveConsole object at 0x00000285750BE670>
+         ©¸ <code object <module> at 0x00000285757A1710, file "<input>", line 1>
+
+  File "<input>", line 1, in <module>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_umd.py", line 198, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+    ©¦             ©¦        ©¦         ©¦            ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¦         ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+    ©¦             ©¸ <function execfile at 0x0000028574B62790>
+    ©¸ <module '_pydev_bundle.pydev_imports' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\_pyde...
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 ©¦              ©¦              ©¦     ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¦              ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+                 ©¸ 'import traceback\n\nfrom loguru import logger\n\nlogger.add("sys.stderr", backtrace=True, diagnose=True)  # Caution, may lea...
+
+> File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 23, in <module>
+    nested(0)
+    ©¸ <function nested at 0x0000028575828940>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 15, in nested
+    func(5, c)
+    ©¦       ©¸ 0
+    ©¸ <function func at 0x00000285757AB8B0>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 9, in func
+    return a / b
+           ©¦   ©¸ 0
+           ©¸ 5
+
+ZeroDivisionError: division by zero
+2021-12-24 11:51:48.927 | ERROR    | __main__:nested:22 - what?
+Traceback (most recent call last):
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 483, in <module>
+    pydevconsole.start_client(host, port)
+    ©¦            ©¦            ©¦     ©¸ 53573
+    ©¦            ©¦            ©¸ '127.0.0.1'
+    ©¦            ©¸ <function start_client at 0x00000248538E7550>
+    ©¸ <module 'pydevconsole' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\pydevconsole.py'>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 411, in start_client
+    process_exec_queue(interpreter)
+    ©¦                  ©¸ <pydevconsole.InterpreterInterface object at 0x00000248538EE4C0>
+    ©¸ <function process_exec_queue at 0x00000248538E73A0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 258, in process_exec_queue
+    interpreter.add_exec(code_fragment)
+    ©¦           ©¦        ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000024853913100>
+    ©¦           ©¸ <function BaseCodeExecutor.add_exec at 0x00000248537EDAF0>
+    ©¸ <pydevconsole.InterpreterInterface object at 0x00000248538EE4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_code_executor.py", line 108, in add_exec
+    more = self.do_add_exec(code_fragment)
+           ©¦    ©¦           ©¸ <_pydev_bundle.pydev_console_types.CodeFragment object at 0x0000024853913100>
+           ©¦    ©¸ <function InterpreterInterface.do_add_exec at 0x000002485383AF70>
+           ©¸ <pydevconsole.InterpreterInterface object at 0x00000248538EE4C0>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\pydevconsole.py", line 84, in do_add_exec
+    command.run()
+    ©¦       ©¸ <function Command.run at 0x00000248537EE310>
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000024853913070>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_console_types.py", line 34, in run
+    self.more = self.interpreter.runsource(text, '<input>', symbol)
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¦                ©¸ 'single'
+    ©¦    ©¦      ©¦    ©¦           ©¦         ©¸ "runfile('D:/Project/CodeTrainning/QQBot/BotGloway/test.py', wdir='D:/Project/CodeTrainning/QQBot/BotGloway')\n"
+    ©¦    ©¦      ©¦    ©¦           ©¸ <function InteractiveInterpreter.runsource at 0x0000024853375F70>
+    ©¦    ©¦      ©¦    ©¸ <code.InteractiveConsole object at 0x00000248538EE670>
+    ©¦    ©¦      ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000024853913070>
+    ©¦    ©¸ None
+    ©¸ <_pydev_bundle.pydev_console_types.Command object at 0x0000024853913070>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 74, in runsource
+    self.runcode(code)
+    ©¦    ©¦       ©¸ <code object <module> at 0x0000024853FE1710, file "<input>", line 1>
+    ©¦    ©¸ <function InteractiveInterpreter.runcode at 0x000002485337D280>
+    ©¸ <code.InteractiveConsole object at 0x00000248538EE670>
+
+  File "D:\language\Python\3.8.9\lib\code.py", line 90, in runcode
+    exec(code, self.locals)
+         ©¦     ©¦    ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         ©¦     ©¸ <code.InteractiveConsole object at 0x00000248538EE670>
+         ©¸ <code object <module> at 0x0000024853FE1710, file "<input>", line 1>
+
+  File "<input>", line 1, in <module>
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_bundle\pydev_umd.py", line 198, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+    ©¦             ©¦        ©¦         ©¦            ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¦         ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+    ©¦             ©¦        ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+    ©¦             ©¸ <function execfile at 0x00000248533A2790>
+    ©¸ <module '_pydev_bundle.pydev_imports' from 'C:\\CodingTool\\Pycharm\\PyCharm 2020.3.5\\plugins\\python\\helpers\\pydev\\_pyde...
+
+  File "C:\CodingTool\Pycharm\PyCharm 2020.3.5\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+                 ©¦              ©¦              ©¦     ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¦              ©¸ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+                 ©¦              ©¸ 'D:/Project/CodeTrainning/QQBot/BotGloway/test.py'
+                 ©¸ 'import traceback\n\nfrom loguru import logger\n\nlogger.add("sys.stderr", backtrace=True, diagnose=True)  # Caution, may lea...
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 25, in <module>
+    nested(0)
+    ©¸ <function nested at 0x000002485406D940>
+
+> File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 17, in nested
+    func(5, c)
+    ©¦       ©¸ 0
+    ©¸ <function func at 0x0000024831BBD040>
+
+  File "D:/Project/CodeTrainning/QQBot/BotGloway/test.py", line 11, in func
+    return a / b
+           ©¦   ©¸ 0
+           ©¸ 5
+
+ZeroDivisionError: division by zero

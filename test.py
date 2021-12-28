@@ -1,47 +1,55 @@
-from nonebot import on_command, CommandSession
-from nonebot import on_natural_language, NLPSession, IntentCommand
-from jieba import posseg
+from loguru import logger
+import json
 import requests
-import time
-import urllib
-from lxml import etree
-from aiocqhttp import MessageSegment
-import requests
-from config import IMAGE_LOCAL
 
-class GetPic:
-    def __init__(self):
-        self.session = requests.session()
+# dynamicPageList = "https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/space_history?visitor_uid=0&host_uid=36081646&offset_dynamic_id=0&need_top=1&platform=web"
+#
+# headers = {
+#     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.41",
+#     'Connection': 'close',
+# }
+#
+# try:
+#     dynamicPageListData = requests.get(dynamicPageList, headers=headers)
+#     dynamicPageListData.close()
+#     a = dynamicPageListData.content.decode('utf8')
+#     # 将json信息写入文件
+#     with open("Test.json", mode="wb") as f:
+#         f.write(dynamicPageListData.content)
+#     print("yes!")
+#     with open("Test.json", mode="w", encoding="utf8") as f:
+#         f.write(a)
+# except Exception:
+#     logger.exception("One Problem Occurred in Catch News Function")
 
-    def get_Pic(self):
-        res = self.session.get("http://api.mtyqx.cn/api/random.php", verify=False)
+logger.add("Test.log", encoding="utf8")
+logger.add("Test.log", encoding="utf8")
+logger.remove()
+logger.add("Test.log", encoding="utf8")
+logger.debug("two sentences")
 
-        # 保存图片
-        with open(IMAGE_LOCAL.format('8531'), "wb") as f:
-            f.write(res.content)
-        return True
-
-@on_command('setu', aliases=('富婆','色图', '老婆', '老婆图', '萝莉'))
-async def setu(session: CommandSession):
-    Pic = GetPic()
-    if Pic.get_Pic():
-        seq = MessageSegment.image("{}.png".format('8531'))
-        await session.send(seq)
-
-@on_natural_language(keywords={'富婆','色图', '老婆', '老婆图', '萝莉'},only_to_me=False)
-async def _(session: NLPSession):
-    # 去掉消息首尾的空白符
-    stripped_msg = session.msg_text.strip()
-    # 对消息进行分词和词性标注
-    words = posseg.lcut(stripped_msg)
-
-    pic = None
-    # 遍历 posseg.lcut 返回的列表
-    for word in words:
-        # 每个元素是一个 pair 对象，包含 word 和 flag 两个属性，分别表示词和词性
-        if word.flag == 'st':
-            pic = word.word
-            break
-
-    # 返回意图命令，前两个参数必填，分别表示置信度和意图命令名
-    return IntentCommand(90.0, 'setu', current_arg=pic)
+# import traceback
+#
+# from loguru import logger
+#
+# logger.add("sys.stderr", backtrace=True, diagnose=True)  # Caution, may leak sensitive data in prod
+#
+# global b
+#
+#
+# def func(a, b):
+#     return a / b
+#
+#
+# @logger.catch
+# def nested(c):
+#     try:
+#         func(5, c)
+#     except ZeroDivisionError as e:
+#         b = e
+#         message = traceback.format_exc()
+#         print(message)
+#         logger.exception("what?")
+#
+#
+# nested(0)

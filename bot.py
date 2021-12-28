@@ -11,7 +11,7 @@ groupIdList = [113624942]
 catchList = [36081646, 406948651, 156489]
 
 # 第一个参数为插件路径，第二个参数为插件前缀（模块的前缀）
-nonebot.load_plugins(path.join(path.dirname(__file__), 'BotPlugins'), 'BotPlugins')
+# nonebot.load_plugins(path.join(path.dirname(__file__), 'BotPlugins'), 'BotPlugins')
 
 # # 如果使用 wsgi
 # bot = nonebot.get_bot()

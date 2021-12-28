@@ -1,6 +1,6 @@
 # welcome to use this project!
 
-## what this bot can do?
+## what can this bot do?
 this bot is designed to capture dynamic info in bilibili uploaders
 which is made up with a crawler
 
@@ -15,6 +15,7 @@ you should install these packages below
 - pip install "nonebot[scheduler]"
 - pip install msgpack
 - pip install ujson
+- pip install loguru
 
 > 清华源加速：<br/>
 > pip install -i https://pypi.tuna.tsinghua.edu.cn/simple docker-compose
